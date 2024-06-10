@@ -10,6 +10,7 @@ function App() {
   );
   
   const deleteTodo = (item) => {
+
     const filtred = (element) =>(
       element != item
     )
@@ -38,7 +39,7 @@ function App() {
     setNewTodo(newValue);
   }
 
-  const handleClick= () => {
+  const handleAdd= () => {
     
       setTodos(
         (oldTodo) => {
@@ -58,7 +59,7 @@ function App() {
       <div class="input-section">
 
       <input  onChange={handleInput} type='text' id='task-input' placeholder='Add your task' value={newTodo} />
-      <button id='add-task-btn' onClick={handleClick}> + </button>
+      <button id='add-task-btn' onClick={handleAdd}> + </button>
       </div>
 
     </div>
